@@ -1,6 +1,6 @@
 /* styles.css */
 
-
+/* é‡ç½®æµè§ˆå™¨é»˜è®¤æ ·å¼ */
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +11,9 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
-    margin: 0; /* ÒÆ³ıÄ¬ÈÏµÄmargin */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ê¹ÍøÒ³ÖÁÉÙÓĞÊÓ¿ÚµÄ¸ß¶È */
+    min-height: 100vh;
 }
 
 header {
@@ -22,14 +21,10 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    position: fixed; /* ¹Ì¶¨ÔÚÒ³Ãæ¶¥²¿ */
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* È·±£headerÔÚÆäËûÄÚÈİÖ®ÉÏ */
-}
-
-header h1 {
-    margin: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -51,7 +46,9 @@ nav a:hover {
 
 .container {
     max-width: 1170px;
-    margin: 20px auto;
+    margin: auto;
+    padding: 60px 20px; /* æ·»åŠ paddingæ¥é¿å…å†…å®¹è¢«é¡¶éƒ¨å’Œåº•éƒ¨çš„banneré®æŒ¡ */
+    flex: 1;
 }
 
 footer {
@@ -59,19 +56,21 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed; /* ¹Ì¶¨ÔÚÒ³Ãæµ×²¿ */
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
 img.screenshot {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    width: 200px; /* è®¾ç½®å®½åº¦ä¸º200px */
+    height: 200px; /* è®¾ç½®é«˜åº¦ä¸º200px */
+    object-fit: cover; /* ä¿æŒå›¾ç‰‡çš„çºµæ¨ªæ¯” */
+    display: block; /* ç¡®ä¿å›¾ç‰‡ç‹¬å ä¸€è¡Œ */
+    margin: 0 auto; /* åœ¨å®¹å™¨ä¸­å±…ä¸­ */
     margin-bottom: 1rem;
 }
 
-/* å¤šé¡µé¢å¸ƒå±?æ ·å¼ */
+/* å¤šé¡µé¢å¸ƒå±€æ ·å¼ */
 .section-heading {
     background: #eee;
     padding: 0.5rem 1rem;
@@ -90,7 +89,7 @@ img.screenshot {
     margin-bottom: 1rem;
 }
 
-/* é¡µé¢å“åº”å¼å¸ƒå±? */
+/* é¡µé¢å“åº”å¼å¸ƒå±€ */
 @media (min-width: 768px) {
     .container {
         width: 750px;
@@ -107,17 +106,4 @@ img.screenshot {
     .container {
         width: 1170px;
     }
-}
-
-img.screenshot {
-    width: 200px; /* ÉèÖÃ¿í¶ÈÎª200px */
-    height: 200px; /* ÉèÖÃ¸ß¶ÈÎª200px */
-    object-fit: cover; /* ±£³ÖÍ¼Æ¬µÄ×İºá±È */
-    margin-bottom: 1rem;
-}
-
-main {
-    padding-top: 60px; /* headerµÄ¸ß¶È */
-    flex: 1; /* ÉìÕ¹ÒÔÌî³äÈİÆ÷ */
-    padding-bottom: 60px; /* footerµÄ¸ß¶È */
 }
